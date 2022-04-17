@@ -22,8 +22,10 @@ myparamFunction can be used the object schema has not been initialised
 */
 
 /*
-if lines 30-35 where included as methods in a module
-there would be no issue in case they were inside a router method
+if lines 30-35 where included as part of module to be exported, there would be no error issue:
+ module.exports = function(){ 
+ //lines 30-35
+ }
 */
 let y = null;
 
@@ -33,8 +35,6 @@ if(error) console.log(error.details[0].message);
 console.log("OK");
 
 const myParamSchema = Joi.string().required();
-
-
 function myParam(input){
 	return myParamSchema.validate(input);
 }
