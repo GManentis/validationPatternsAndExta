@@ -19,13 +19,18 @@ if(!isset($y) || strlen(trim($y)) == 0){
 //end string
 
 //validate boolean
-$z = "true";
-if(!isset($y) || !in_array($z, ['true','false','1',1])){//in array is not datatype sensitive if not requested
+$z = 'true';
+if(!isset($z) || !in_array($z, ['true','false','1','0'])){//in_array is not datatype sensitive if not requested
 	echo "not boolean";
 	return;
 }
 
-$z = in_array(['true','1']) ? true : false;
+
+/*
+Important note: Just because in_array can get 'true' as true and false as 'false' and vice versa, this does not mean that 'false' == false will return true. "true", "false" are treated as strings" 
+*/
+
+$z = in_array($z, ['true','1']) ? true : false;
 //end
 
 
