@@ -14,7 +14,7 @@ the reason we echo boolean as strings is beacause php echos truthities as 1 and 
 */
 echo 4 > "A" ? "true" : "false"; //PHP tries to treat "A" as number because it is compared with a number so it treats it as 0. If there was f.e 5a, it would be treated as 5
 echo "\n";
-echo "2" > "A" ? "true" : "false"; //PHP treats both entries as numbers, so it will be false 
+echo "2" > "A" ? "true" : "false"; //Php checks that not both numbers start with numeric values. So the result is false
 echo "\n";
 echo 2 > 11 ? "true" : "false"; //both are numeric and the comparison is like numeric.False
 echo "\n";
