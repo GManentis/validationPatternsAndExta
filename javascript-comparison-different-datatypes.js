@@ -1,9 +1,9 @@
 /*
 how comparison of different datatypes works in js:
 
-1. If one of the compared values is number (no quotas), convert the other member to number before comparison
-2. If boolean is compared with a variable that is number or is string of numeric value, the boolean is converted to 1 or 0
-3. If boolean is compared to non empty string it equals (with == )true else is considered false
+1. if one of the compared param is boolean convert to 1 for true or 0 for false
+2. If number (without "") and string are compared, then convert string to number and compare them
+
 
 Examples: 
 */
@@ -13,4 +13,4 @@ console.log("2" > "11"); //both data types are considered strings and are compar
 console.log("2" > true); //js checks if "2" is numeric. So, boolean is treated as 1, and compares them as numbers, so it is 2 > 1 which is true
 console.log(-2 < false); //boolean is treated as 0, and the comparison turns to be -2 < 0 which is true
 console.log(true > false); //true is 1 and false is 0 => returns true
-console.log("foo" < true); // non empty string == to true, so the comparison is false
+console.log("true" == true); // true is considered as 1, "true" as NaN, return false
