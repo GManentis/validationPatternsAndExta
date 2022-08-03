@@ -2,7 +2,7 @@
 /*
 how datatype comparison works in php, 
 1. If one of the compared values is number (no quotas), convert the other member to number before comparison
-2. If two string are compared, PHP checks if both are of numeric value(casts them to numbers) .If both are numeric, then are compared as numbers else as strings
+2. If two string are compared, PHP checks if both are of numeric value .If both values are numeric, then are compared as numbers else as strings
 
 3. If boolean is compared with a variable that is number (without quotas), if number is no zero, then it is considered true else false
 4. If boolean is compared to string, if string not empty and not equal "0" then is true. Else, false
