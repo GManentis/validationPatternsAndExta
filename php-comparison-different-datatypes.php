@@ -2,19 +2,21 @@
 /*
 how datatype comparison works in php, 
 1. If one of the compared values is number (no quotas), convert the other member to number before comparison
-2. If two string are compared, PHP checks if both are of numeric value of start with numbers .If both are, then are compared as numbers else as strings
+2. If two string are compared, PHP checks if both are of numeric value(casts them to numbers) .If both are numeric, then are compared as numbers else as strings
 
 3. If boolean is compared with a variable that is number (without quotas), if number is no zero, then it is considered true else false
 4. If boolean is compared to string, if string not empty and not equal "0" then is true. Else, false
 
+5. If both operands are numeric strings, or one operand is a number and the other one is a numeric string
 Important note, "true" in "" is considered string not boolean
 
 Examples: 
 the reason we echo boolean as strings is beacause php echos truthities as 1 and falseties as empty space
 */
+
 echo 4 > "A" ? "true" : "false"; //PHP tries to treat "A" as number because it is compared with a number so it treats it as 0. If there was f.e 5a, it would be treated as 5
 echo "\n";
-echo "2" > "A" ? "true" : "false"; //Php checks that not both numbers start with numeric values. So the result is false
+echo "2" > "A" ? "true" : "false"; //Php checks that the content inside the "" is not numeric in both cases and treats them as strings . So the result is false
 echo "\n";
 echo 2 > 11 ? "true" : "false"; //both are numeric and the comparison is like numeric.False
 echo "\n";
