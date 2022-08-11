@@ -13,7 +13,7 @@ if(!isset($x) || !is_numeric($x)){ //if you want if int release is_numeric with 
 //validate string
 //is_string checks if data type is string. This means that "23" will pass but 23 without quotes not.
 $y = "Foo";
-if(!isset($y) || is_string($y) || strlen(trim($y)) == 0){
+if(!isset($y) || !is_string($y) || strlen(trim($y)) == 0){
 	echo "issue";
 	return;	
 }
