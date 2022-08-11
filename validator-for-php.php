@@ -1,7 +1,11 @@
 <?php
 //validate number
 $x = 23;
-if(!isset($x) || !is_numeric($x)){ //if you want if int release is_numeric with is_int()
+if(!isset($x) || !is_numeric($x)){ 
+/*
+if you want if int, after is_numeric() we can check if is_int($x * 1). Note the reason that we done $x*1 is because the number can be inside "" 
+and we want to completely convert it to number in our case
+*/
 	echo "ISSUE";
 	return;
 }
